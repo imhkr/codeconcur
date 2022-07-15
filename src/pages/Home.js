@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuidV4 } from "uuid";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import CompilerPage from "./CompilerPage";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,9 @@ const Home = () => {
       },
     });
   };
-
+  function compiler() {
+    navigate("/compiler");
+  }
   const handleInputEnter = (e) => {
     if (e.code === "Enter") {
       joinRoom();
@@ -39,8 +42,11 @@ const Home = () => {
       <div className="formWrapper">
         <img
           className="homePageLogo"
-          src="/code-sync.png"
+          src="/code-sync.jpg"
           alt="code-sync-logo"
+          width="200"
+          height="400"
+          background="black"
         />
         <h4 className="mainLabel">Paste invitation ROOM ID</h4>
         <div className="inputGroup">
@@ -62,6 +68,9 @@ const Home = () => {
           />
           <button className="btn joinBtn" onClick={joinRoom}>
             Join
+          </button>
+          <button className="btn" onClick={compiler}>
+            Compiler
           </button>
           <span className="createInfo">
             If you don't have an invite then create &nbsp;
