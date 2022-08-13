@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Home from "./pages/Home";
 import EditorPage from "./pages/EditorPage";
-import CompilerPage from "./pages/CompilerPage";
+import Landing from "./components/Compiler/Landing";
 function App() {
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/editor/:roomId" element={<EditorPage />}></Route>
-          <Route path="/compiler" element={<CompilerPage />}></Route>
+          <Route path="/landing" element={<Landing />}></Route>
         </Routes>
       </BrowserRouter>
     </>

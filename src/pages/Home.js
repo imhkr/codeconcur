@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuidV4 } from "uuid";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import CompilerPage from "./CompilerPage";
+import Landing from "../components/Compiler/Landing";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Home = () => {
     });
   };
   function compiler() {
-    navigate("/compiler");
+    navigate("/Landing");
   }
   const handleInputEnter = (e) => {
     if (e.code === "Enter") {
@@ -69,9 +69,9 @@ const Home = () => {
           <button className="btn joinBtn" onClick={joinRoom}>
             Join
           </button>
-          {/* <button className="btn" onClick={compiler}>
+          <button className="btn" onClick={compiler}>
             Compiler
-          </button> */}
+          </button>
           <span className="createInfo">
             If you don't have an invite then create &nbsp;
             <a onClick={createNewRoom} href="" className="createNewBtn">
