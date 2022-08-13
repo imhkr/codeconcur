@@ -42,7 +42,7 @@ const Home = () => {
       <div className="formWrapper">
         <img
           className="homePageLogo"
-          src="/code-sync.jpg"
+          src="/code-sync1.png"
           alt="code-sync-logo"
           width="200"
           height="400"
@@ -69,9 +69,9 @@ const Home = () => {
           <button className="btn joinBtn" onClick={joinRoom}>
             Join
           </button>
-          <button className="btn" onClick={compiler}>
+          {/* <button className="btn" onClick={compiler}>
             Compiler
-          </button>
+          </button> */}
           <span className="createInfo">
             If you don't have an invite then create &nbsp;
             <a onClick={createNewRoom} href="" className="createNewBtn">
